@@ -10,8 +10,96 @@
   } */
 
   /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
+  /* Portfolio grid: 3 columns */
+  .portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  /* Teammates aligned in a row */
+  .teammates-list-wrapper {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+
+  /* Hover styles */
+  .top-navigation ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .teammate-social-icons > div:hover {
+    background-color: #0077ff;
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  footer .social-icons div:hover,
+  .footer-contacts ul li a:hover {
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
+@media (max-width: 1023px) {
+  /* Header adjustments */
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  /* Teammates: allow wrapping */
+  .teammates-list-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .teammate {
+    min-width: 100%;
+    align-items: center;
+  }
+
+  /* Footer layout */
+  .footer-contacts {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
 
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
+@media (max-width: 767px) {
+  /* Show trigram */
+  .top-navigation .trigram {
+    display: block;
+    font-size: 24px;
+  }
+
+  /* Hide nav list by default */
+  .top-navigation ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Portfolio stacked */
+  .portfolio-list {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Footer social stacked */
+  footer .social-icons {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
