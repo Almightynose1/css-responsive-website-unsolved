@@ -41,17 +41,36 @@
     color: white;
     text-decoration: underline;
   }
+
+  .top-navigation .trigram {
+    display: none;
+  }
 }
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
 @media (max-width: 1023px) {
-  /* Header adjustments */
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 20px;
-    gap: 1rem;
+  .top-navigation li {
+    display: none;
+  }
+
+  .portfolio-list {
+    display: flex;
+  }
+
+  .portfolio-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .teammates-list {
+    display: flex;
+    width: 100%;
+  }
+
+  .teammates-list-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   /* Teammates: allow wrapping */
@@ -62,8 +81,11 @@
   }
 
   .teammate {
-    min-width: 100%;
-    align-items: center;
+    width: 47%;
+  }
+
+  .teammate-img-wrapper {
+    width: 100%;
   }
 
   /* Footer layout */
