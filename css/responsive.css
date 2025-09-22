@@ -53,13 +53,24 @@
     display: none;
   }
 
+  .teammates-list::before,
+  .teammates-list:after {
+    display: none;
+  }
+
   .portfolio-list {
     display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons span {
+    display: none;
   }
 
   .portfolio-item {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   .teammates-list {
@@ -90,7 +101,6 @@
 
   /* Footer layout */
   .footer-contacts {
-    flex-direction: column;
     align-items: center;
     gap: 30px;
   }
@@ -124,4 +134,8 @@
     flex-direction: column;
     gap: 20px;
   }
+}
+
+.social-icons span {
+  display: none;
 }
