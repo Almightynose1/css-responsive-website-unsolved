@@ -104,17 +104,19 @@
     align-items: center;
     gap: 30px;
   }
+
+  .social-icons span {
+    display: none;
+  }
 }
 
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
 @media (max-width: 767px) {
-  /* Show trigram */
   .top-navigation .trigram {
     display: block;
     font-size: 24px;
   }
 
-  /* Hide nav list by default */
   .top-navigation ul {
     display: none;
     flex-direction: column;
@@ -123,19 +125,30 @@
     width: 100%;
   }
 
-  /* Portfolio stacked */
   .portfolio-list {
     flex-direction: column;
     gap: 40px;
   }
 
-  /* Footer social stacked */
+  .portfolio-item {
+    flex-direction: column;
+  }
+
   footer .social-icons {
     flex-direction: column;
     gap: 20px;
   }
-}
 
-.social-icons span {
-  display: none;
+  .teammate-data {
+    width: 100%;
+  }
+
+  .teammate {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .social-icons span {
+    display: flex;
+  }
 }
